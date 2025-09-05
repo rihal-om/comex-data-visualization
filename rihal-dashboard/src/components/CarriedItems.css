@@ -1,0 +1,24 @@
+.carried-items-box {
+  background: #dffcf9;
+  border-radius: 30px;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  box-sizing: border-box;
+  height: 100%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.carried-items-box .bx--chart-holder {
+  background: transparent !important;
+  border-radius: 12px;
+}
+
+.carried-items-box .bx--chart-title {
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}

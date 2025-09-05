@@ -1,0 +1,27 @@
+.visitors-box {
+  background: #dffcf9;
+  border-radius: 30px;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  box-sizing: border-box;
+  height: auto; /* ✅ full parent height */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.visitors-box .bx--chart-holder {
+  background: transparent !important;
+  border-radius: 12px;
+  flex: 1; /* ✅ chart stretches inside */
+  width: 100%;
+  height: 100%;
+}
+
+.visitors-box .bx--chart-title {
+  text-align: center;
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}

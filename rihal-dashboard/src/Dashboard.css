@@ -1,0 +1,99 @@
+.dashboard-two-col {
+  display: grid;
+  grid-template-columns: 2fr 2fr; /* your proportions */
+  grid-template-rows: minmax(240px, 1fr) minmax(240px, 1fr);
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+/* left full-height tile */
+/* placements unchanged */
+.carried-items {
+  grid-column: 1;
+  grid-row: 1 / span 2;
+  align-self: stretch;
+}
+.face-expression {
+  grid-column: 2;
+  grid-row: 1;
+}
+.analytics {
+  grid-column: 2;
+  grid-row: 2;
+}
+
+/* guard against overflow */
+.dashboard-two-col > div {
+  min-width: 0;
+  min-height: 0;
+}
+
+/* right column stacked */
+.face-expression {
+  grid-column: 2;
+  grid-row: 1;
+}
+.emotion-excretions {
+  position: relative;
+  top: -8.3rem;
+}
+
+.emotion-excretions--outer {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 1rem;
+  display: flex;
+  flex-direction: column; /* stack spans vertically */
+  border-radius: 8px;
+  overflow: hidden; /* rounded corners apply to spans */
+}
+
+/* each band shares equal space */
+.emotion-excretions--outer span {
+  flex: 1; /* each takes equal height */
+  width: 100%;
+}
+
+.happy {
+  background: #ffeb3b;
+} /* bright yellow */
+.sad {
+  background: #2196f3;
+} /* blue */
+.angry {
+  background: #f44336;
+} /* red */
+.surprised {
+  background: #9c27b0;
+} /* purple */
+.calm {
+  background: #4caf50;
+} /* green */
+.fear {
+  background: #ff9800;
+} /* orange */
+.love {
+  background: #e91e63;
+} /* pink */
+.analytics {
+  grid-column: 2;
+  grid-row: 2;
+}
+.dashboard-two-col > div {
+  min-width: 0;
+  min-height: 0;
+}
+body {
+  background: linear-gradient(to right, #000000, #4d4d4d);
+}
+
+.visitors-count,
+.dashboard-two-col,
+.anime-sketch {
+  grid-column: 1;
+}
+.dashboard {
+  position: relative;
+  padding-right: calc(1rem + 1.5rem); /* bar width + the same gap you use */
+}

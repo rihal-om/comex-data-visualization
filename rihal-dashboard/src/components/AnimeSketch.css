@@ -1,0 +1,52 @@
+.anime-tile {
+  background: #dffcf9;
+  border-radius: 30px;
+  padding: 1rem 1.5rem;
+  display: flex;
+  align-items: stretch; /* 👈 chart matches left column height */
+  justify-content: flex-start;
+  gap: 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* left stats: fixed min, flexible max */
+.anime-left {
+  flex: 0 0 200px; /* 👈 starts at 200px wide */
+  max-width: 260px; /* 👈 but doesn’t grow past 260px */
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+/* right chart: takes the rest */
+.anime-right {
+  flex: 1 1 auto; /* ✅ grow/shrink with available space */
+  min-width: 0; /* ✅ lets chart shrink without overflow */
+  display: flex;
+}
+
+/* chart wrapper sizing */
+.mini-chart {
+  width: 100%;
+  height: 240px; /* control height here */
+}
+
+/* make Carbon chart fluid */
+.anime-tile .bx--chart-holder {
+  width: 100% !important;
+  height: 100% !important;
+  background: transparent !important;
+  border-radius: 12px;
+}
+
+/* 🔽 Remove the stacking media query — instead just let flex shrink */
+@media (max-width: 768px) {
+  .anime-left {
+    flex: 0 0 150px; /* ✅ shrink the stats column */
+  }
+  .mini-chart {
+    height: 200px; /* ✅ lower chart height on small screens */
+  }
+}
