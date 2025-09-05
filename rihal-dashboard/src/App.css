@@ -1,0 +1,31 @@
+/* Chrome, Edge, Safari */
+::-webkit-scrollbar {
+  width: 10px; /* scrollbar thickness */
+}
+
+::-webkit-scrollbar-track {
+  background: #000000; /* ✅ solid black background */
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(
+    to right,
+    #000000,
+    #4d4d4d
+  ); /* thumb = body gradient */
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(
+    to right,
+    #1a1a1a,
+    #5c5c5c
+  ); /* lighter on hover */
+}
+
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #4d4d4d #4d4d4d; /* thumb | track */
+}

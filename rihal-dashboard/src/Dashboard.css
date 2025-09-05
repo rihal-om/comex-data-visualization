@@ -97,3 +97,6 @@ body {
   position: relative;
   padding-right: calc(1rem + 1.5rem); /* bar width + the same gap you use */
 }
+.camera-box {
+  padding: 20%;
+}
